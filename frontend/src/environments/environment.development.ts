@@ -1,4 +1,4 @@
-// import '../mocks/browser';
+import '../mocks/browser';
 export const environment = {
   locationsApi: 'http://localhost:1337/',
   auth: {
