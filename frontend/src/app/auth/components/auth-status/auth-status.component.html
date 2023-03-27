@@ -1,0 +1,16 @@
+<button
+  *ngIf="(loggedIn$ | async) === false"
+  type="button"
+  class="btn btn-primary"
+  (click)="logIn()"
+>
+  Log In
+</button>
+<button
+  *ngIf="(loggedIn$ | async) === true"
+  type="button"
+  class="btn btn-primary"
+  (click)="logOut()"
+>
+  Log Out {{ user$ | async }}
+</button>

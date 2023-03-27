@@ -1,0 +1,19 @@
+<section>
+  <h3>Locations</h3>
+  <div *ngIf="model$ | async as model">
+    <div class="alert alert-info" *ngIf="model.loading">
+      <p>Locations are loading...</p>
+    </div>
+    <ul class="list-unstyled" *ngIf="!model.loading">
+      <li class="card" *ngFor="let loc of model.locations">
+        <div class="card-header">{{ loc.name }}</div>
+        <div class="card-body">
+          <p>{{ loc.description }}</p>
+        </div>
+        <div class="card-footer">
+          <p>Added by {{ loc.addedBy }} on {{ loc.addedOn | date }}</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
