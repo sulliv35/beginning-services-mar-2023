@@ -1,15 +1,16 @@
 ﻿
 namespace NewCSharpStuff;
 
-public class Customer
-{
-    public string? Name { get; set; }
+//public record Customer 
+//{
+//    public  string? Name { get; init; }
 
-    public int? Age { get; set; }
+//    public  int? Age { get; init; }
 
-    public List<Order> Orders { get; set; }
+//    public string NickName { get; init; } = string.Empty;
 
-}
-
+//}
+// constructor syntax.
+public record Customer(string? Name, int Age, string NickName);
 
 public class Order { }

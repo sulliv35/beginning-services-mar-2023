@@ -3,25 +3,23 @@
 
 using NewCSharpStuff;
 
-Console.WriteLine("Hello, World!");
+var c1 = new Customer("Jeffry", 53, "Jeff");
 
 
-var c1 = new Customer()
+
+
+
+
+var c2 = new Customer
 {
-    Name = "Bob",
-
-   
+    Name = "Joe",
+    Age = 40
 };
-c1.Orders.Add(new Order());
 
-if (c1.Name is not null && c1.Age.HasValue)
+if(c1 == c2)
 {
-    Console.WriteLine($"The name is {c1.Name} and the age is {c1.Age.Value}");
-
-}
-else
+    Console.WriteLine("They are the same!");
+} else
 {
+    Console.WriteLine("They are NOT the same");
 }
-
-
-// Sir Tony Hoare "My Four Billion Dollar Mistake"
