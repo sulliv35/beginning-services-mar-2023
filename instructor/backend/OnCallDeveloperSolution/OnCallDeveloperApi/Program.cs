@@ -8,7 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddSingleton<ISystemTime, SystemTime>();
-builder.Services.AddScoped<IProvideSupportSchedule, SupportSchedule>();
+builder.Services.AddScoped<IProvideSupportSchedule, HolidayBasedSupportSchedule>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
