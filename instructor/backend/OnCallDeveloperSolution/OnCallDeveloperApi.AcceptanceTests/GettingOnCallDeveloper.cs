@@ -22,7 +22,7 @@ public class GettingOnCallDeveloper
 
         var expected = new OnCallDeveloperModel
         {
-            Name = "Bob Smith",
+            Name = "Bob Smith", 
             Phone = "888-8888",
             Email = "bob@company.com"
         };
